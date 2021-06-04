@@ -66,6 +66,33 @@ div.box:nth-child(2) { /*box centrale*/
     margin: 0% 7%;
 }
 
+.output {
+    padding:15px;
+}
+.output h3{
+    text-transform: uppercase;
+}
+.display{
+    display: flex;
+}
+
+.pippo{
+    background-color: gray;
+    height: 150px;
+    width: 20%;
+}
+.tabella{
+    background-color: white;
+    width: 80%;
+}
+.tabella table{
+    height: 150px;
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 0px 15px;
+}
 
 /*-------------------- zona cantiere/debug/esperimenti ----------------- */
 .debug .form{
@@ -73,7 +100,7 @@ div.box:nth-child(2) { /*box centrale*/
 }
 
 .debug .output{
-    min-height: 300px;
+    /* min-height: 300px; */
 }
 
 .debug .box{
