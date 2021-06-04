@@ -7,7 +7,12 @@
 .text_center{
     text-align: center !important;
 }
-
+button{
+    font-size: 1.1rem;
+    padding: 3px;
+    color:#b91450;
+    margin-bottom: 15px;
+}
 
 h2{
     text-align: center;
@@ -38,9 +43,29 @@ h2{
 .testo{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 0 auto;
     padding: 20px 0px;
 }
+.box label{
+    display: block;
+    color: #b91450;
+}
+.box input,
+#età{
+    height: 1.7rem;
+    border: 1px solid #b91450;
+    border-radius: 0.3rem;
+    margin: 10px 0;
+}
+input:focus-visible{
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+div.box:nth-child(2) { /*box centrale*/
+    margin: 0% 7%;
+}
+
 
 /*-------------------- zona cantiere/debug/esperimenti ----------------- */
 .debug .form{
@@ -52,7 +77,7 @@ h2{
 }
 
 .debug .box{
-    background-color: lightblue;
-    height: 150px;
-    width: calc(100% / 3 - 20px);
+    /* background-color: lightblue; */
+    /* height: 150px; */
+    /* width: calc(100% / 3 - 20px); */
 }
