@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
 }
+
+.text_center{
+    text-align: center !important;
+}
+
+
 h2{
     text-align: center;
     color: white;
@@ -27,16 +33,26 @@ h2{
     width: 85%; 
     margin: 0 auto;
     border-radius: 0.7rem;
+    background-color: white;
 }
-
+.testo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
 
 /*-------------------- zona cantiere/debug/esperimenti ----------------- */
 .debug .form{
     /* min-height: 500px; */
 }
 
-.debug .input,
 .debug .output{
     min-height: 300px;
-    background-color: white;
+}
+
+.debug .box{
+    background-color: lightblue;
+    height: 150px;
+    width: calc(100% / 3 - 20px);
 }
