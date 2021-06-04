@@ -5,5 +5,23 @@
 }
 
 .container{
-    color: rebeccapurple;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form{
+    align-self: center;
+    background-color: #b91450;
+    width: 100%;
+    max-width: 1180px;
+
+}
+
+
+
+/*-------------------- zona cantiere/debug/esperimenti ----------------- */
+.debug .form{
+    min-height: 500px;
 }
