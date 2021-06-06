@@ -3,6 +3,9 @@ var sconto = document.getElementById("sconto");
 var costo = document.getElementById("costo");
 var carrozza = document.getElementById("carrozza");
 var codice = document.getElementById("codCP");
+var distanzaType = false;
+var nomeType = false;
+
 document.getElementById("gen").addEventListener("click",function(){
     // alert("button genera");
 
@@ -17,37 +20,59 @@ document.getElementById("gen").addEventListener("click",function(){
     var anni = document.getElementById("età").value;
     anni = anni.toLowerCase();
     console.log(anni);
-
-    var prezzo = distanza * 0.21 ; // calcolo prezzo biblietto 
-    console.log(prezzo);
-    //calcolo sconto su prezzo biglietto
-    if(anni=="minorenne"){
-        prezzo = prezzo - (prezzo * 0.2);
-        document.getElementById("sconto").innerHTML="Sconto Minorenne";
+    console.log(distanza);
+    if(typeof(distanza) == "number" && distanza > 0 ){
+       distanzaType = true;
     }
-    else if(anni=="over65"){
-             prezzo = prezzo - (prezzo * 0.4);
-             document.getElementById("sconto").innerHTML="Sconto Over 65";
+    else{
+       distanzaType = false;
+    }
+    if(nome.length > 3){
+        nomeType = true;
+    }
+    else{
+        nomeType=false;
+    }
+    console.log(distanzaType);
+    console.log(nomeType);
 
-            }
-         else{
-             document.getElementById("sconto").innerHTML="niente sconti";
-         }
-    // console.log("prezzo scontato" + prezzo);
+    if(distanzaType && nomeType){
+        var prezzo = distanza * 0.21 ; // calcolo prezzo biblietto 
+        console.log(prezzo);
+        //calcolo sconto su prezzo biglietto
+        if(anni=="minorenne"){
+            prezzo = prezzo - (prezzo * 0.2);
+            document.getElementById("sconto").innerHTML="Sconto Minorenne";
+        }
+        else if(anni=="over65"){
+                 prezzo = prezzo - (prezzo * 0.4);
+                 document.getElementById("sconto").innerHTML="Sconto Over 65";
     
-    //genero numCarrozza
-    var numCarrozza = Math.floor(Math.random() * 9  + 1);  //numero random 1 <= x <= 9
-    //genero codCP
-    var codCP = Math.floor(Math.random() * 10000 + 90000); // numero random 90k <= x <= 100k
-    console.log(codCP);
-
-    //-----------------output-----------------
-    nomePasseggero.innerHTML = nome; //scrittura in output del nome
-    costo.innerHTML= prezzo.toFixed(2) + "€";
-    carrozza.innerHTML=numCarrozza;
-    codice.innerHTML=codCP;
-
-    document.getElementById("biglietto").className = "display";
+                }
+             else{
+                 document.getElementById("sconto").innerHTML="niente sconti";
+             }
+        // console.log("prezzo scontato" + prezzo);
+        
+        //genero numCarrozza
+        var numCarrozza = Math.floor(Math.random() * 9  + 1);  //numero random 1 <= x <= 9
+        //genero codCP
+        var codCP = Math.floor(Math.random() * 10000 + 90000); // numero random 90k <= x <= 100k
+        console.log(codCP);
+    
+        //-----------------output-----------------
+        nomePasseggero.innerHTML = nome; //scrittura in output del nome
+        costo.innerHTML= prezzo.toFixed(2) + "€";
+        carrozza.innerHTML=numCarrozza;
+        codice.innerHTML=codCP;
+    
+        document.getElementById("biglietto").className = "display";
+    
+    }
+    else{
+        alert("dati errati");
+    }
+    
 });
 
 document.getElementById("annulla").addEventListener("click",function(){
