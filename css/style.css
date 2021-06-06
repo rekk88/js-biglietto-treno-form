@@ -15,7 +15,12 @@ button{
     color:#b91450;
     margin-bottom: 15px;
 }
-
+.display{
+    display: block;
+}
+.display_none{
+    display: none;
+}
 h2{
     text-align: center;
     color: white;
@@ -74,7 +79,7 @@ div.box:nth-child(2) { /*box centrale*/
 .output h3{
     text-transform: uppercase;
 }
-.display{
+.display_flex{
     display: flex;
 }
 

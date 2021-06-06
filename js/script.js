@@ -1,3 +1,8 @@
+var nomePasseggero = document.getElementById("nomeP");
+var sconto = document.getElementById("sconto");
+var costo = document.getElementById("costo");
+var carrozza = document.getElementById("carrozza");
+var codice = document.getElementById("codCP");
 document.getElementById("gen").addEventListener("click",function(){
     // alert("button genera");
 
@@ -37,14 +42,27 @@ document.getElementById("gen").addEventListener("click",function(){
     console.log(codCP);
 
     //-----------------output-----------------
-    document.getElementById("nomeP").innerHTML = nome; //scrittura in output del nome
-    document.getElementById("costo").innerHTML= prezzo.toFixed(2) + "€";
-    document.getElementById("carrozza").innerHTML=numCarrozza;
-    document.getElementById("codCP").innerHTML=codCP;
+    nomePasseggero.innerHTML = nome; //scrittura in output del nome
+    costo.innerHTML= prezzo.toFixed(2) + "€";
+    carrozza.innerHTML=numCarrozza;
+    codice.innerHTML=codCP;
+
+    document.getElementById("biglietto").className = "display";
 });
 
+document.getElementById("annulla").addEventListener("click",function(){
+    // alert("annulla");
 
+    //svuoto tutti i campi di testo 
+    nomePasseggero.innerHTML = "";
+    sconto.innerHTML= "";
+    costo.innerHTML="";
+    carrozza.innerHTML="";
+    codice.innerHTML="";
 
+    document.getElementById("biglietto").className = "display_none";
+
+});
 
 // if(età < 18){
 //     prezzo = prezzo - (prezzo * 0.2); //sconto del 20%  prezzo -= prezzo * 0.2 --> forma abbreviata
