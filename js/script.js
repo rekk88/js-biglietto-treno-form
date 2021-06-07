@@ -88,15 +88,3 @@ document.getElementById("annulla").addEventListener("click",function(){
     document.getElementById("biglietto").className = "display_none";
 
 });
-
-// if(età < 18){
-//     prezzo = prezzo - (prezzo * 0.2); //sconto del 20%  prezzo -= prezzo * 0.2 --> forma abbreviata
-//     document.getElementById("sconto").innerHTML="sconto 20%";
-// }
-// else if(età > 65){
-//             prezzo = prezzo - (prezzo * 0.4); //sconto del 40%
-//             document.getElementById("sconto").innerHTML="sconto 40%";
-//         }
-//      else{
-//          document.getElementById("sconto").innerHTML="niente sconto per te ....hahahah";
-//      }
